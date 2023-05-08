@@ -1,33 +1,49 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Sign up Page</title>
-	<link rel="stylesheet" type="text/css" href="/css/signup.css">
+	<title>Login Page</title>
+	<link rel="stylesheet" type="text/css" href="/css/Login.css">
 </head>
+
 <body>
+<div class="hero">
+		<nav>
+			<h2 class="logo">Siry<span> Shop</span></h2>
+			<ul class="navigation">
+				<li><a href="/index.php">Home</a></li>
+				<li><a href="/html/aboutUs.html">About US</a></li>
+				<li><a href="#prdct">Product</a></li>
+				<li><a href="/html/contactUs.html">Contact us</a></li>
+			</ul>
+
+			<div>
+				<h2 id="userWelcome" class="logo"></h2>
+			</div>
+			<div id="btdiv">
+			<button id="log" type="button" onclick=" location.reload();location.href='/html/login.php'; return false;">Login</button>
+				<button id="sign" onclick= "location.reload();location.href='/html/signup.php'; return false;">SignUp</button>
+			</div>
+        </nav>
 	<div class="login-box">
-		<h1>Sign up</h1>
-		<form>
-			<label for="Email">Email</label>
-			<input type="email" id="username" name="username" placeholder="Enter your Email">
-
-			<label for="Email">Phone Number</label>
-			<input type="number" id="number" name="number" placeholder="Enter your phone number">
-
-			<label for="username">Username</label>
-			<input type="text" id="username" name="username" placeholder="Enter your username">
-
-			<label for="password">Password</label>
-			<input type="password" id="password" name="password" placeholder="Enter your password">
-
-			<label for="password">Confirm Password</label>
-			<input type="password" id="confPassword" name="confPassword" placeholder="Confirm your password">
+		<h1>Login</h1>
+		<form method="post" action="../additional/login.php">
+		<div class="inputBox">
+			<input type="text" id="email" name="email">
+			<span>Email</span>
+		</div>
+		
+		<div class="inputBox">
+			
+			<input type="password" id="password" name="password" >
+			<span>Password</span>
+		</div>
 
 			<input type="submit" value="Login">
 		</form>
-		<div class="extra">
-		<a href="/html/login.html">Already a user?</a>
-		</div>
+		
 	</div>
+	
 </body>
+
 </html>
