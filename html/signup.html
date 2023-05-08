@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<title>Login Page</title>
-	<link rel="stylesheet" type="text/css" href="/css/Login.css">
+	<title>Sign up Page</title>
+	<link rel="stylesheet" type="text/css" href="/css/signup.css">
 </head>
-
 <body>
 <div class="hero">
 		<nav>
@@ -25,25 +23,38 @@
 				<button id="sign" onclick= "location.reload();location.href='/html/signup.php'; return false;">SignUp</button>
 			</div>
         </nav>
-	<div class="login-box">
-		<h1>Login</h1>
-		<form method="post" action="../additional/login.php">
-		<div class="inputBox">
-			<input type="text" id="email" name="email">
-			<span>Email</span>
-		</div>
-		
-		<div class="inputBox">
-			
-			<input type="password" id="password" name="password" >
-			<span>Password</span>
-		</div>
 
-			<input type="submit" value="Login">
+	<div class="login-box">
+		<h1>Sign up</h1>
+		<form action="../additional/signup.php" method="POST">
+			
+			<div class="inputBox">
+			<input type="email" id="email" name="email"  required>
+			<span>Email</span>
+			</div>
+
+			<div class="inputBox">
+			<input type="number" id="number" name="number"  required>
+			<span>Phone number</span>
+			</div>
+
+			<div class="inputBox">
+			<input type="text" id="username" name="username" required>
+			<span>Username</span>
+			</div>
+
+			<div class="inputBox">
+			<input type="password" id="password" name="password"  required>
+			<span>Password</span>
+			</div>
+
+			<div class="inputBox">
+			<input type="password" id="confPassword" name="confPassword"  required>
+			<span>Confirm password</span>
+			</div>
+
+			<input type="submit" value="SignUp">
 		</form>
-		
-	</div>
 	
 </body>
-
 </html>
