@@ -279,6 +279,7 @@ nav ul li a:hover{
     background-position: center;
     background-repeat: no-repeat;
     z-index: 11;
+    display: none;
     
  }
  .toggle.active {
